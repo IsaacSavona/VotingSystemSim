@@ -9,19 +9,20 @@ repos:
         exclude: ""
 -   repo: local
     hooks:
-      - id: ruff_format
-        name: ruff_format 
-        entry: poetry run ruff format
-        language: system
-        types: [python]
--   repo: local
-    hooks:
       - id: ruff_check
         name: ruff_check
         entry: poetry run ruff check
         language: system
-        types: [python]
+        types: [ python, pyi, jupyter ]
+        args: [ --fix ]
         files: '^votingsystemsim/'
+-   repo: local
+    hooks:
+      - id: ruff_format
+        name: ruff_format 
+        entry: poetry run ruff format
+        language: system
+        types: [ python, pyi, jupyter ]
 -   repo: local
     hooks:
       - id: mypy
