@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "votingsystemsim"
+version = "0.1.0"
+description = ""
+authors = ["IsaacSavona <isaacsavona@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+pre-commit = "^4.0.1"
+numpy = "^2.1.2"
+black = "^24.10.0"
+ruff = "^0.7.1"
+mypy = "^1.13.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
