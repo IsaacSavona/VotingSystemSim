@@ -7,22 +7,17 @@ repos:
         # but no large files anywhere ;)
         files: ''
         exclude: ""
--   repo: local
+-   repo: https://github.com/astral-sh/ruff-pre-commit
+    # Ruff version.
+    rev: v0.7.1
     hooks:
-      - id: ruff_check
-        name: ruff_check
-        entry: poetry run ruff check
-        language: system
-        types: [ python, pyi, jupyter ]
+      # Run the linter.
+    -   id: ruff
+        types_or: [ python, pyi, jupyter ]
         args: [ --fix ]
-        files: '^votingsystemsim/'
--   repo: local
-    hooks:
-      - id: ruff_format
-        name: ruff_format 
-        entry: poetry run ruff format
-        language: system
-        types: [ python, pyi, jupyter ]
+      # Run the formatter.
+    -   id: ruff-format
+        types_or: [ python, pyi, jupyter ]
 -   repo: local
     hooks:
       - id: mypy
