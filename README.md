@@ -5,3 +5,11 @@ This is a simulation framework to run Monte Carlo simulations for different theo
 # How do you use this?
 
 Well you can run this as long as you have `poetry` installed on your computer and the recquired Python dependencies. In the future, hopefully a TypeScript frontend will be implemented to allow people to interact with this on the web.
+
+## Start using `votingsystemsim`
+
+To start using this framework simply clone the repository to your local machine and then run:  
+
+`poetry install`
+
+As long as you have all the required Python packages, this should allow you to start using the simulation framework.
